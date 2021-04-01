@@ -48,6 +48,51 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/P02-VehiclesAPI/pricing-service/src/main/resources/data.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/P02-VehiclesAPI/vehicles-api/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/P02-VehiclesAPI/vehicles-api/src/main/java/com/udacity/vehicles/VehiclesApiApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/P02-VehiclesAPI/vehicles-api/src/main/java/com/udacity/vehicles/client/maps/MapsClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/P02-VehiclesAPI/vehicles-api/src/main/java/com/udacity/vehicles/client/prices/PriceClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/P02-VehiclesAPI/vehicles-api/src/main/java/com/udacity/vehicles/domain/AbstractCarFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/P02-VehiclesAPI/vehicles-api/src/main/java/com/udacity/vehicles/domain/manufacturer/CarFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/P02-VehiclesAPI/vehicles-api/src/main/java/com/udacity/vehicles/service/CarService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/P02-VehiclesAPI/vehicles-api/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>

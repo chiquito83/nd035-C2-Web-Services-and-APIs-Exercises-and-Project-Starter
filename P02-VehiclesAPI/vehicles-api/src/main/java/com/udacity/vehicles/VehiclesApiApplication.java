@@ -1,5 +1,10 @@
 package com.udacity.vehicles;
 
+import com.udacity.vehicles.domain.AbstractCarFactory;
+import com.udacity.vehicles.domain.car.Car;
+import com.udacity.vehicles.domain.car.CarRepository;
+import com.udacity.vehicles.domain.car.Details;
+import com.udacity.vehicles.domain.manufacturer.CarFactory;
 import com.udacity.vehicles.domain.manufacturer.Manufacturer;
 import com.udacity.vehicles.domain.manufacturer.ManufacturerRepository;
 import org.modelmapper.ModelMapper;
@@ -8,6 +13,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -29,7 +35,7 @@ public class VehiclesApiApplication {
      * @param repository where the manufacturer information persists.
      * @return the car manufacturers to add to the related repository
      */
-    @Bean
+    @Bean("initManufacturer")
     CommandLineRunner initDatabase(ManufacturerRepository repository) {
         return args -> {
             repository.save(new Manufacturer(100, "Audi"));
@@ -37,6 +43,21 @@ public class VehiclesApiApplication {
             repository.save(new Manufacturer(102, "Ford"));
             repository.save(new Manufacturer(103, "BMW"));
             repository.save(new Manufacturer(104, "Dodge"));
+
+        };
+    }
+
+    @Bean
+    @DependsOn("initManufacturer")
+    CommandLineRunner initCars(CarRepository repository) {
+        return args -> {
+
+            AbstractCarFactory carFactory = new CarFactory();
+
+
+
+            repository.save(carFactory.create());
+            System.out.println("added cars");
         };
     }
 
